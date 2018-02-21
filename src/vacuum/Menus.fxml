@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="600.0" prefWidth="1000.0" styleClass="gradient" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vacuum.MenusController">
+   <children>
+      <Label layoutX="287.0" layoutY="55.0" prefHeight="42.0" prefWidth="432.0" text="              Vacuum Cleaner Ai Agent" textFill="WHITE">
+         <font>
+            <Font name="Roboto Medium" size="23.0" />
+         </font>
+      </Label>
+      <HBox fx:id="boxMenus" layoutX="63.0" layoutY="197.0" prefHeight="227.0" prefWidth="921.0" spacing="20.0">
+         <children>
+            <AnchorPane fx:id="paneUsers" onMouseClicked="#switchToUsers" prefHeight="227.0" prefWidth="207.0" styleClass="menus">
+               <children>
+                  <ImageView fx:id="imageA" fitHeight="171.0" fitWidth="171.0" layoutX="16.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../icons/house-things.png" />
+                     </image></ImageView>
+                  <ImageView fx:id="imageTrashA" fitHeight="48.0" fitWidth="45.0" layoutX="141.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../icons/close.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="labelA" alignment="CENTER" layoutX="18.0" layoutY="190.0" prefHeight="28.0" prefWidth="171.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneTickets" onMouseClicked="#switchToTickets" prefHeight="227.0" prefWidth="207.0" styleClass="menus">
+               <children>
+                  <ImageView fx:id="imageD" fitHeight="171.0" fitWidth="171.0" layoutX="17.0" layoutY="11.0" onMouseExited="#switchToTickets" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../icons/house-things.png" />
+                     </image></ImageView>
+                  <ImageView fx:id="imageTrashD" fitHeight="48.0" fitWidth="45.0" layoutX="142.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../icons/close.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="labelD" alignment="CENTER" layoutX="10.0" layoutY="191.0" prefHeight="28.0" prefWidth="185.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneBuses" onMouseClicked="#switchToBuses" prefHeight="227.0" prefWidth="207.0" styleClass="menus">
+               <children>
+                  <ImageView fx:id="imageC" fitHeight="171.0" fitWidth="171.0" layoutX="22.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../icons/house-things.png" />
+                     </image></ImageView>
+                  <ImageView fx:id="imageTrashC" fitHeight="48.0" fitWidth="45.0" layoutX="146.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../icons/close.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="labelC" alignment="CENTER" layoutX="19.0" layoutY="190.0" prefHeight="28.0" prefWidth="171.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paneDrivers" onMouseClicked="#switchToDrivers" prefHeight="227.0" prefWidth="207.0" styleClass="menus">
+               <children>
+                  <ImageView fx:id="imageB" fitHeight="171.0" fitWidth="171.0" layoutX="21.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../icons/house-things.png" />
+                     </image></ImageView>
+                  <ImageView fx:id="imageTrashB" fitHeight="48.0" fitWidth="45.0" layoutX="141.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../icons/close.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="labelB" alignment="CENTER" layoutX="16.0" layoutY="190.0" prefHeight="28.0" prefWidth="171.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <StackPane fx:id="fabsContainer" layoutX="903.0" layoutY="439.0" prefHeight="100.0" prefWidth="45.0" />
+      <JFXButton fx:id="btnEdit" buttonType="RAISED" layoutX="447.0" layoutY="109.0" onAction="#editDriver" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #00B3A0;" text="play" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="labelstate" alignment="CENTER" layoutX="142.0" layoutY="489.0" prefHeight="37.0" prefWidth="726.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelstate2" alignment="CENTER" layoutX="288.0" layoutY="521.0" prefHeight="37.0" prefWidth="451.0" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
